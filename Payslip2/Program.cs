@@ -12,25 +12,27 @@ namespace Payslip2
             
             Console.WriteLine(welcome + "\n" + inputQuestion, "name");
             var name = Console.ReadLine();
-            EdgeCase.NullOrEmptyInput(name);
+            InputValidation.NullOrEmptyInput(name);
 
             Console.WriteLine(inputQuestion, "surname");
             var surname = Console.ReadLine();
-            EdgeCase.NullOrEmptyInput(surname);
+            InputValidation.NullOrEmptyInput(surname);
             
             Console.WriteLine(enterQuestion, "annual salary");
-            var salary = Double.Parse(Console.ReadLine());
+            var salaryAsString = Console.ReadLine();
+            var salary = InputValidation.NumberInputValidation(salaryAsString);
             
             Console.WriteLine(enterQuestion, "super rate");
-            var superRate = Double.Parse(Console.ReadLine());
+            var superRateAsString = Console.ReadLine();
+            var superRate = InputValidation.NumberInputValidation(superRateAsString);
             
             Console.WriteLine(enterQuestion, "payment start date");
             var startDate = Console.ReadLine();
-            EdgeCase.NullOrEmptyInput(startDate);
+            InputValidation.NullOrEmptyInput(startDate);
             
             Console.WriteLine(enterQuestion, "payment end date");
             var endDate = Console.ReadLine();
-            EdgeCase.NullOrEmptyInput(endDate);
+            InputValidation.NullOrEmptyInput(endDate);
             
             Statement.PayslipStatement(salary, name, surname, startDate, endDate, superRate);
         }
