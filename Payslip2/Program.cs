@@ -2,44 +2,35 @@
 
 namespace Payslip2
 {
-    public class Program
+    public static class Program
     {
-        static void Main()
+        private static void Main()
         {
-            var welcome = Questions.Welcome();
-            var firstNameQuestion = Questions.FirstNameQuestion();
-            var surnameQuestion = Questions.SurnameQuestion();
-            var salaryQuestion = Questions.SalaryQuestion();
-            var superRateQuestion = Questions.SuperRateQuestion();
-            var startDateQuestion = Questions.StartDateQuestion();
-            var endDateQuestion = Questions.EndDateQuestion();
+            var welcome = Greeting.Welcome();
+            var inputQuestion = Greeting.InputQuestion();
+            var enterQuestion = Greeting.EnterQuestion();
             
-            Console.WriteLine(welcome + firstNameQuestion);
+            Console.WriteLine(welcome + "\n" + inputQuestion, "name");
             var name = Console.ReadLine();
-            Edgecases.NullOrEmptyInput(name);
+            EdgeCase.NullOrEmptyInput(name);
 
-            Console.WriteLine(surnameQuestion);
+            Console.WriteLine(inputQuestion, "surname");
             var surname = Console.ReadLine();
-            Edgecases.NullOrEmptyInput(surname);
+            EdgeCase.NullOrEmptyInput(surname);
             
-            Console.WriteLine(salaryQuestion);
+            Console.WriteLine(enterQuestion, "annual salary");
             var salary = Double.Parse(Console.ReadLine());
-            //TryParse, test format of string - to determine type
-            //Repetion in the code
-            //testing the format being wrong
-            //gaps in testing - general developer - git 
-            //UML - classes relationship diagrams
             
-            Console.WriteLine(superRateQuestion);
+            Console.WriteLine(enterQuestion, "super rate");
             var superRate = Double.Parse(Console.ReadLine());
             
-            Console.WriteLine(startDateQuestion);
+            Console.WriteLine(enterQuestion, "payment start date");
             var startDate = Console.ReadLine();
-            Edgecases.NullOrEmptyInput(startDate);
+            EdgeCase.NullOrEmptyInput(startDate);
             
-            Console.WriteLine(endDateQuestion);
+            Console.WriteLine(enterQuestion, "payment end date");
             var endDate = Console.ReadLine();
-            Edgecases.NullOrEmptyInput(endDate);
+            EdgeCase.NullOrEmptyInput(endDate);
             
             Statement.PayslipStatement(salary, name, surname, startDate, endDate, superRate);
         }

@@ -2,7 +2,7 @@ using System;
 
 namespace Payslip2
 {
-    public class Edgecases
+    public static class EdgeCase
     {
         public static string NullOrEmptyInput(string input)
         {

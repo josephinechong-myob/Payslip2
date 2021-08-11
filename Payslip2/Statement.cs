@@ -2,7 +2,7 @@ using System;
 
 namespace Payslip2
 {
-    public class Statement
+    public static class Statement
     {
         public static void PayslipStatement(double salary, string name, string surname, string startDate, string endDate, double superRate)
         {

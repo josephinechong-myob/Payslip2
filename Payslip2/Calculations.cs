@@ -2,13 +2,14 @@ using System;
 
 namespace Payslip2
 {
-    public class Calculations
+    public static class Calculations
     {
         private static double IncomeTaxEquation(double initialTax, double salary, double untaxedValue, double taxPercent)
         {
             var incomeTax = Convert.ToInt32(Math.Ceiling((initialTax + ((salary - untaxedValue) * taxPercent)) / 12));
             return incomeTax;
         }
+        
         public static double IncomeTaxCalculation(double salary)
         {
             switch (salary)
