@@ -89,9 +89,9 @@ namespace Payslip2Test
         [Fact]
         public void StringInputValidationStringInputTest()
         {
-            var expected = "John";
+            var expected = false;
 
-            string actual = InputValidation.StringInputValidation("John");
+            var actual = InputValidation.StringInputCondition("John");
             
             Assert.Equal(expected, actual);
         }
