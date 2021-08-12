@@ -12,7 +12,7 @@ namespace Payslip2
             
             Console.WriteLine(welcome + "\n" + inputQuestion, "name");
             var name = Console.ReadLine();
-            InputValidation.NullOrEmptyInput(name);
+            InputValidation.StringInputValidation(name);
 
             Console.WriteLine(inputQuestion, "surname");
             var surname = Console.ReadLine();
