@@ -117,31 +117,31 @@ namespace Payslip2Test
         }
         
         [Fact]
-        public void NullOrEmptyConditionEmptyInputTest()
+        public void NullOrEmptyInputConditionEmptyInputTest()
         {
             var expected = true;
 
-            var actual = InputValidation.NullOrEmptyCondition("");
+            var actual = InputValidation.NullOrEmptyInputCondition("");
             
             Assert.Equal(expected, actual);
         }
         
         [Fact]
-        public void NullOrEmptyConditionNumberInputTest()
+        public void NullOrEmptyInputConditionNumberInputTest()
         {
             var expected = false;
 
-            var actual = InputValidation.NullOrEmptyCondition("1");
+            var actual = InputValidation.NullOrEmptyInputCondition("1");
             
             Assert.Equal(expected, actual);
         }
         
         [Fact]
-        public void NullOrEmptyConditionCharacterInputTest()
+        public void NullOrEmptyInputConditionCharacterInputTest()
         {
             var expected = false;
 
-            var actual = InputValidation.NullOrEmptyCondition("A");
+            var actual = InputValidation.NullOrEmptyInputCondition("A");
             
             Assert.Equal(expected, actual);
         }

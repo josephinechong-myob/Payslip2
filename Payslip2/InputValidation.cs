@@ -10,19 +10,6 @@ namespace Payslip2
             var condition = Regex.IsMatch(input, @"\d+$") || string.IsNullOrEmpty(input);
             return condition;
         }
-        
-        public static bool NullOrEmptyCondition(string input)
-        {
-            var condition = string.IsNullOrEmpty(input);
-            return condition;
-        }
-        
-        public static bool NumberInputCondition(string input)
-        {
-            var condition = Regex.IsMatch(input, @"[a-zA-Z]") || string.IsNullOrEmpty(input);
-            return condition;
-        }
-        
         public static string StringInputValidation(string input)
         {
             while (StringInputCondition(input))
@@ -30,21 +17,14 @@ namespace Payslip2
                 Console.WriteLine(Greeting.InvalidMessage());
                 input = Console.ReadLine();
             }
-
             return input;
         }
         
-        public static string NullOrEmptyInput(string input)
+        public static bool NumberInputCondition(string input)
         {
-            while (NullOrEmptyCondition(input))
-            {
-                Console.WriteLine(Greeting.InvalidMessage());
-                input = Console.ReadLine();
-            }
-
-            return input;
+            var condition = Regex.IsMatch(input, @"[a-zA-Z]") || string.IsNullOrEmpty(input);
+            return condition;
         }
-        
         public static int NumberInputValidation(string input)
         {
             while (NumberInputCondition(input))
@@ -52,21 +32,22 @@ namespace Payslip2
                 Console.WriteLine(Greeting.InvalidMessage());
                 input = Console.ReadLine();
             }
-
             return Int32.Parse(input);
         }
         
-        /*
-        public static int NumberInputValidation(string input)
+        public static bool NullOrEmptyInputCondition(string input)
         {
-            int output;
-            while (!int.TryParse(input, out output))
+            var condition = string.IsNullOrEmpty(input);
+            return condition;
+        }
+        public static string NullOrEmptyInputValidation(string input)
+        {
+            while (NullOrEmptyInputCondition(input))
             {
                 Console.WriteLine(Greeting.InvalidMessage());
                 input = Console.ReadLine();
             }
-            return output;
+            return input;
         }
-        */
     }
 }

@@ -25,10 +25,10 @@ namespace Payslip2
             var superRate = InputValidation.NumberInputValidation(Console.ReadLine());
             
             Console.WriteLine(enterQuestion, "payment start date");
-            var startDate = InputValidation.NullOrEmptyInput(Console.ReadLine());
+            var startDate = InputValidation.NullOrEmptyInputValidation(Console.ReadLine());
             
             Console.WriteLine(enterQuestion, "payment end date");
-            var endDate = InputValidation.NullOrEmptyInput(Console.ReadLine());
+            var endDate = InputValidation.NullOrEmptyInputValidation(Console.ReadLine());
             
             Statement.PayslipStatement(salary, name, surname, startDate, endDate, superRate);
         }
