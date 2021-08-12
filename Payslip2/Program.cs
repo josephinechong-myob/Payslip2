@@ -16,7 +16,7 @@ namespace Payslip2
 
             Console.WriteLine(inputQuestion, "surname");
             var surname = Console.ReadLine();
-            InputValidation.NullOrEmptyInput(surname);
+            InputValidation.StringInputValidation(surname);
             
             Console.WriteLine(enterQuestion, "annual salary");
             var salaryAsString = Console.ReadLine();

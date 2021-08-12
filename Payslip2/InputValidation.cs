@@ -5,17 +5,16 @@ namespace Payslip2
 {
     public static class InputValidation
     {
-        private static string InvalidMessage()
+        private static void InvalidMessage()
         {
-            var invalidMessage = "This entry is not valid. Please enter a valid value";
-            return invalidMessage;
+            Console.WriteLine("This entry is not valid. Please enter a valid value");
         }
+        
         public static string NullOrEmptyInput(string input)
         {
             while (string.IsNullOrEmpty(input))
             {
-                //Console.WriteLine("This entry cannot be empty. Please enter a value");
-                Console.WriteLine(InvalidMessage());
+                InvalidMessage();
                 input = Console.ReadLine();
             }
 
@@ -26,7 +25,7 @@ namespace Payslip2
         {
             while (Regex.IsMatch(input, @"\d+$") || string.IsNullOrEmpty(input))
             {
-                Console.WriteLine("This entry is not valid. Please enter a valid value");
+                InvalidMessage();
                 input = Console.ReadLine();
             }
 
@@ -38,7 +37,7 @@ namespace Payslip2
             int output;
             while (!int.TryParse(input, out output))
             {
-                Console.WriteLine("This is not a number. Please enter a valid value");
+                InvalidMessage();
                 input = Console.ReadLine();
             }
             return output;
