@@ -84,7 +84,5 @@ namespace Payslip2Test
             
             Assert.Equal(expected, actual);
         }
-        
-        
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using Microsoft.VisualBasic.FileIO;
 
 namespace Payslip2
 {
@@ -9,30 +11,24 @@ namespace Payslip2
             var welcome = Greeting.Welcome();
             var inputQuestion = Greeting.InputQuestion();
             var enterQuestion = Greeting.EnterQuestion();
-            
+
             Console.WriteLine(welcome + "\n" + inputQuestion, "name");
-            var name = Console.ReadLine();
-            InputValidation.StringInputValidation(name);
+            var name = InputValidation.StringInputValidation(Console.ReadLine());
 
             Console.WriteLine(inputQuestion, "surname");
-            var surname = Console.ReadLine();
-            InputValidation.StringInputValidation(surname);
-            
+            var surname = InputValidation.StringInputValidation(Console.ReadLine());
+
             Console.WriteLine(enterQuestion, "annual salary");
-            var salaryAsString = Console.ReadLine();
-            var salary = InputValidation.NumberInputValidation(salaryAsString);
+            var salary = InputValidation.NumberInputValidation(Console.ReadLine());
             
             Console.WriteLine(enterQuestion, "super rate");
-            var superRateAsString = Console.ReadLine();
-            var superRate = InputValidation.NumberInputValidation(superRateAsString);
+            var superRate = InputValidation.NumberInputValidation(Console.ReadLine());
             
             Console.WriteLine(enterQuestion, "payment start date");
-            var startDate = Console.ReadLine();
-            InputValidation.NullOrEmptyInput(startDate);
+            var startDate = InputValidation.NullOrEmptyInput(Console.ReadLine());
             
             Console.WriteLine(enterQuestion, "payment end date");
-            var endDate = Console.ReadLine();
-            InputValidation.NullOrEmptyInput(endDate);
+            var endDate = InputValidation.NullOrEmptyInput(Console.ReadLine());
             
             Statement.PayslipStatement(salary, name, surname, startDate, endDate, superRate);
         }
