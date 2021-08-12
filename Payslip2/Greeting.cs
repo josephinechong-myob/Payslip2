@@ -1,3 +1,5 @@
+using System;
+
 namespace Payslip2
 {
     public static class Greeting
@@ -18,6 +20,13 @@ namespace Payslip2
         {
             var enterQuestion = "Please enter your {0}";
             return enterQuestion;
+        }
+        
+        public static string InvalidMessage()
+        {
+            var invalidMessage = "This entry is not valid. Please enter a valid value";
+            return invalidMessage;
+
         }
     }
 }

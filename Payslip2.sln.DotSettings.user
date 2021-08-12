@@ -1,6 +1,29 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b1d0c0eb_002Dec50_002D47d3_002Da331_002D38ea30658b3c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7b9ad4eb_002Dfdaf_002D4739_002D8d75_002D906e2373ec55/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="StringInputValidationNumberInputTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.StringInputValidationStringInputTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.StringInputConditionEmptyInputTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.NullOrEmptyConditionEmptyInputTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.NullOrEmptyConditionNumberInputTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.NullOrEmptyConditionCharacterInputTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.NumberInputConditionCharacterInputTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.NumberInputConditionEmptyInputTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.NumberInputConditionNumberInputTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b1d0c0eb_002Dec50_002D47d3_002Da331_002D38ea30658b3c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b99bffae_002D69b6_002D4fdb_002D8f69_002Ddeb4bc2b861c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EmptyFirstnameTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.StringInputValidationStringInputTest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.StringInputValidationNumberInputTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=feb114a8_002De09f_002D4437_002D9c87_002D3af900f44b68/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EmptyFirstnameTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;xUnit::8A4292F0-5F16-4EED-A283-1A8F4130F8D1::net5.0::Payslip2Test.Payslip2UnitTest.EmptyFirstnameTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

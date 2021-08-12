@@ -5,42 +5,68 @@ namespace Payslip2
 {
     public static class InputValidation
     {
-        private static void InvalidMessage()
+        public static bool StringInputCondition(string input)
         {
-            Console.WriteLine("This entry is not valid. Please enter a valid value");
+            var condition = Regex.IsMatch(input, @"\d+$") || string.IsNullOrEmpty(input);
+            return condition;
         }
         
-        public static string NullOrEmptyInput(string input)
+        public static bool NullOrEmptyCondition(string input)
         {
-            while (string.IsNullOrEmpty(input))
-            {
-                InvalidMessage();
-                input = Console.ReadLine();
-            }
-
-            return input;
+            var condition = string.IsNullOrEmpty(input);
+            return condition;
+        }
+        
+        public static bool NumberInputCondition(string input)
+        {
+            var condition = Regex.IsMatch(input, @"[a-zA-Z]") || string.IsNullOrEmpty(input);
+            return condition;
         }
         
         public static string StringInputValidation(string input)
         {
-            while (Regex.IsMatch(input, @"\d+$") || string.IsNullOrEmpty(input))
+            while (StringInputCondition(input))
             {
-                InvalidMessage();
+                Console.WriteLine(Greeting.InvalidMessage());
                 input = Console.ReadLine();
             }
 
             return input;
         }
+        
+        public static string NullOrEmptyInput(string input)
+        {
+            while (NullOrEmptyCondition(input))
+            {
+                Console.WriteLine(Greeting.InvalidMessage());
+                input = Console.ReadLine();
+            }
 
+            return input;
+        }
+        
+        public static int NumberInputValidation(string input)
+        {
+            while (NumberInputCondition(input))
+            {
+                Console.WriteLine(Greeting.InvalidMessage());
+                input = Console.ReadLine();
+            }
+
+            return Int32.Parse(input);
+        }
+        
+        /*
         public static int NumberInputValidation(string input)
         {
             int output;
             while (!int.TryParse(input, out output))
             {
-                InvalidMessage();
+                Console.WriteLine(Greeting.InvalidMessage());
                 input = Console.ReadLine();
             }
             return output;
         }
+        */
     }
 }
